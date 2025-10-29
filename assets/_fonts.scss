@@ -1,0 +1,16 @@
+
+$font-family-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+$font-size-base: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 40px;
+$font-size-xxl: 72px;
+
+
+@mixin title-big {
+  font-family: $font-family-sans;
+  font-weight: 800;
+  line-height: 0.95;
+  font-size: $font-size-xxl;
+  letter-spacing: -1px;
+}

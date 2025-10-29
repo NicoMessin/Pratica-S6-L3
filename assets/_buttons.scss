@@ -1,0 +1,23 @@
+
+@import 'colors';
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 180ms ease;
+  transform-origin: center;
+
+  &:hover { transform: translateY(-3px); }
+  &:active { transform: translateY(-1px) scale(0.99); }
+}
+
+@each $name, $color in $btn-colors {
+  .btn-#{$name} {
+    background-color: $color;
+    box-shadow: 0 6px 18px rgba(red($color), green($color), blue($color), 0.18);
+    &:hover { filter: brightness(1.03); }
+  }
+}

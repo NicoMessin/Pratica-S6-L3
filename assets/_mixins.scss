@@ -1,0 +1,22 @@
+
+@import 'colors';
+
+
+@mixin floating($radius: 12px, $shadow-y: 10px, $shadow-blur: 30px, $border: null) {
+  border-radius: $radius;
+  box-shadow: 0 $shadow-y $shadow-blur rgba(20, 20, 20, 0.18);
+
+  @if $border != null {
+    border: 1px solid $border;
+  }
+}
+@mixin grid($cols: 4, $gap: 20px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  > * {
+    flex: 1 1 calc((100% / $cols) - (#{$gap} - (#{$gap} / $cols)));
+    max-width: calc((100% / $cols) - (#{$gap} - (#{$gap} / $cols)));
+  }
+}
